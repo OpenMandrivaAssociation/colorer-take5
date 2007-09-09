@@ -1,10 +1,11 @@
 %define	major 0
-%define libname	%mklibname colorer %{major}
+%define libname %mklibname colorer %{major}
+%define develname %mklibname colorer -d
 
 Summary:	Colorer take5 is a syntax highlighting and text parsing library
 Name:		colorer-take5
 Version:	0
-Release:	%mkrel 0.beta5.1
+Release:	%mkrel 0.beta5.2
 Group:		Text tools
 License:	MPL
 URL:		http://colorer.sourceforge.net/
@@ -38,16 +39,17 @@ language constructions (brackets, paired tags). Colorer uses pure C++, XML, it
 is fully portable and works on either win32/unix/mac platforms. Top level Java
 language API is also available. 
 
-%package -n	%{libname}-devel
+%package -n	%{develname}
 Summary:	Static library and header files for the %{name} library
 Group:		Development/C++
-Provides:	%{name}-devel = %{version}
-Provides:	lib%{name}-devel = %{version}
-Provides:	libcolorer-devel = %{version}
 Requires:	%{libname} = %{version}
 Requires:	%{name}-base = %{version}
+Provides:	%{name}-devel = %{version}-%{release}
+Provides:	lib%{name}-devel = %{version}-%{release}
+Provides:	libcolorer-devel = %{version}-%{release}
+Obsoletes:	%{mklibname colorer 0 -d}
 
-%description -n	%{libname}-devel
+%description -n	%{develname}
 Colorer take5 is a syntax highlighting and text parsing library, that provides
 services of text parsing in host editor systems in real-time and transforming
 results into colored text. Result information allows to search and build
@@ -133,7 +135,7 @@ mv %{buildroot}%{_datadir}/doc/colorer-take5 installed_docs
 %doc LICENSE README
 %attr(0755,root,root) %{_libdir}/libcolorer.so.%{major}
 
-%files -n %{libname}-devel
+%files -n %{develname}
 %defattr(-,root,root,-)
 %{_includedir}/colorer
 %{_libdir}/libcolorer.so
@@ -148,5 +150,3 @@ mv %{buildroot}%{_datadir}/doc/colorer-take5 installed_docs
 %{_datadir}/colorer/catalog.xml
 %{_datadir}/colorer/hrc
 %{_datadir}/colorer/hrd
-
-
