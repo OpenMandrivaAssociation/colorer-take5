@@ -15,6 +15,7 @@ Patch1:		colorer-soname.diff
 Patch2:		colorer-DESTDIR.diff
 BuildRequires:	libstdc++-devel
 Requires:	%{libname} = %{version}
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-root
 
 %description
 Colorer take5 is a syntax highlighting and text parsing library, that provides
