@@ -2,7 +2,7 @@
 %define libname %mklibname colorer %{major}
 %define develname %mklibname colorer -d
 
-Summary:	Colorer take5 is a syntax highlighting and text parsing library
+Summary:	Syntax highlighting and text parsing library
 Name:		colorer-take5
 Version:	0
 Release:	%mkrel 0.beta5.2
@@ -27,7 +27,7 @@ is fully portable and works on either win32/unix/mac platforms. Top level Java
 language API is also available. 
 
 %package -n	%{libname}
-Summary:	Colorer take5 is a syntax highlighting and text parsing library
+Summary:	Syntax highlighting and text parsing library
 Group:          System/Libraries
 
 %description -n	%{libname}
