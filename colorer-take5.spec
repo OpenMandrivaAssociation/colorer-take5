@@ -119,9 +119,13 @@ rm -f %{buildroot}%{_datadir}/colorer/{LICENSE,README}
 rm -rf installed_docs
 mv %{buildroot}%{_datadir}/doc/colorer-take5 installed_docs
 
+%if %mdkversion < 200900
 %post -n %{libname} -p /sbin/ldconfig
+%endif
 
+%if %mdkversion < 200900
 %postun -n %{libname} -p /sbin/ldconfig
+%endif
 
 %clean
 [ "%{buildroot}" != "/" ] && rm -rf %{buildroot}
