@@ -5,7 +5,7 @@
 Summary:	Syntax highlighting and text parsing library
 Name:		colorer-take5
 Version:	0
-Release:	%mkrel 0.beta5.2
+Release:	%mkrel 0.beta5.3
 Group:		Text tools
 License:	MPL
 URL:		http://colorer.sourceforge.net/
@@ -15,7 +15,7 @@ Patch1:		colorer-soname.diff
 Patch2:		colorer-DESTDIR.diff
 BuildRequires:	libstdc++-devel
 Requires:	%{libname} = %{version}
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-root
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 Colorer take5 is a syntax highlighting and text parsing library, that provides
@@ -108,7 +108,7 @@ find . -type f|xargs file|grep 'text'|cut -d: -f1|xargs perl -p -i -e 's/\r//'
 %make RPM_OPT_FLAGS="%{optflags} -fpermissive -Wall -fPIC"
 
 %install
-[ "%{buildroot}" != "/" ] && rm -rf %{buildroot}
+rm -rf %{buildroot}
 
 %makeinstall_std
 
@@ -128,7 +128,7 @@ mv %{buildroot}%{_datadir}/doc/colorer-take5 installed_docs
 %endif
 
 %clean
-[ "%{buildroot}" != "/" ] && rm -rf %{buildroot}
+rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root,-)
