@@ -5,7 +5,7 @@
 Summary:	Syntax highlighting and text parsing library
 Name:		colorer-take5
 Version:	0
-Release:	%mkrel 0.beta5.3
+Release:	%mkrel 0.beta5.4
 Group:		Text tools
 License:	MPL
 URL:		http://colorer.sourceforge.net/
