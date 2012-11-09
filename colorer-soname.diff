@@ -1,0 +1,11 @@
+--- src/libcolorer/makefile.gcc	2005-04-28 23:22:33.000000000 +0200
++++ src/libcolorer/makefile.gcc.oden	2006-03-20 15:46:13.000000000 +0100
+@@ -8,7 +8,7 @@
+ include ../shared/makefile.colorer.gcc
+ 
+ LIBINC = -lstdc++
+-LIBFLAGS = $(coreobjects) -shared -o $(TARGET) $(LIBINC)
++LIBFLAGS = $(coreobjects) -shared -Wl,-soname=libcolorer.so.0 -o $(TARGET).0 $(LIBINC)
+ 
+ 
+ libcolorer.so: $(coreobjects)
