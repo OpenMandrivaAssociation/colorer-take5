@@ -154,3 +154,51 @@ rm -rf %{buildroot}
 %{_datadir}/colorer/catalog.xml
 %{_datadir}/colorer/hrc
 %{_datadir}/colorer/hrd
+
+
+%changelog
+* Thu Dec 09 2010 Oden Eriksson <oeriksson@mandriva.com> 0-0.beta5.5mdv2011.0
++ Revision: 617406
+- the mass rebuild of 2010.0 packages
+
+* Wed Sep 02 2009 Thierry Vignaud <tv@mandriva.org> 0-0.beta5.4mdv2010.0
++ Revision: 424924
+- rebuild
+
+* Fri Jul 11 2008 Oden Eriksson <oeriksson@mandriva.com> 0-0.beta5.3mdv2009.0
++ Revision: 233767
+- rebuild
+
+  + Pixel <pixel@mandriva.com>
+    - do not call ldconfig in %%post/%%postun, it is now handled by filetriggers
+
+* Mon Feb 18 2008 Thierry Vignaud <tv@mandriva.org> 0-0.beta5.2mdv2008.1
++ Revision: 170230
+- fix "foobar is blabla" summary (=> "blabla") so that it looks nice in rpmdrake
+- kill re-definition of %%buildroot on Pixel's request
+
+  + Olivier Blin <oblin@mandriva.com>
+    - restore BuildRoot
+
+* Sun Sep 09 2007 Oden Eriksson <oeriksson@mandriva.com> 0-0.beta5.2mdv2008.0
++ Revision: 83708
+- new devel naming
+
+
+* Tue Dec 19 2006 Oden Eriksson <oeriksson@mandriva.com> 0-0.beta5.1mdv2007.0
++ Revision: 100352
+- Import colorer-take5
+
+* Tue Dec 19 2006 Oden Eriksson <oeriksson@mandriva.com> 0-0.beta5.1mdv2007.1
+- beta5
+- rediffed P2
+
+* Thu Jul 27 2006 Oden Eriksson <oeriksson@mandriva.com> 0-0.beta4.3mdk
+- rebuild
+
+* Mon Mar 20 2006 Oden Eriksson <oeriksson@mandriva.com> 0-0.beta4.2mdk
+- fix deps and add the base sub package
+
+* Mon Mar 20 2006 Oden Eriksson <oeriksson@mandriva.com> 0-0.beta4.1mdk
+- initial Mandriva package
+
