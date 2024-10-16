@@ -8,7 +8,7 @@ Version:	0
 Release:	%mkrel 0.beta5.5
 Group:		Text tools
 License:	MPL
-URL:		http://colorer.sourceforge.net/
+URL:		https://colorer.sourceforge.net/
 Source0:	http://prdownloads.sourceforge.net/colorer/Colorer-take5-linux.be5.tar.bz2
 Patch0:		colorer-optflags.diff
 Patch1:		colorer-soname.diff
