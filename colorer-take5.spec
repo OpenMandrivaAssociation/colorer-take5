@@ -13,6 +13,11 @@ Source0:	http://prdownloads.sourceforge.net/colorer/Colorer-take5-linux.be5.tar.
 Patch0:		colorer-optflags.diff
 Patch1:		colorer-soname.diff
 Patch2:		colorer-DESTDIR.diff
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	libstdc++-devel
 Requires:	%{libname} = %{version}
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
